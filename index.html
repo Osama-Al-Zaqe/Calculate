@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="رياضياتي | Math Pro — تطبيق رياضيات شامل: آلة حاسبة علمية، حل معادلات، تفاضل وتكامل، رسم بياني تفاعلي، مصفوفات، إحصاء والمزيد." />
+    <title>رياضياتي | Math Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <aside id="sidebar" class="sidebar" aria-label="القائمة الجانبية">
+        <div class="sidebar__brand">
+          <div class="brand-mark" aria-hidden="true">∑</div>
+          <div class="brand-text">
+            <strong>رياضياتي</strong>
+            <span>Math&nbsp;Pro</span>
+          </div>
+        </div>
+        <nav id="nav-list" class="nav-list"></nav>
+        <div class="sidebar__footer">
+          <button id="theme-toggle" class="btn btn--ghost btn--block" type="button">
+            <span class="ico">🌙</span><span class="label">الوضع الداكن</span>
+          </button>
+          <button id="reset-data" class="btn btn--ghost btn--block btn--danger" type="button">
+            <span class="ico">🗑️</span><span class="label">حذف البيانات المحلية</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="main-wrap">
+        <header class="topbar">
+          <button id="menu-btn" class="icon-btn" type="button" aria-label="فتح القائمة">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="topbar__title">
+            <h1 id="page-title">الرئيسية</h1>
+            <p id="page-sub">كل أدوات الرياضيات في مكان واحد</p>
+          </div>
+          <div class="topbar__actions">
+            <button id="angle-toggle" class="chip" type="button" title="وحدات الزوايا">DEG</button>
+            <button id="theme-toggle-top" class="icon-btn" type="button" aria-label="تبديل الوضع">🌙</button>
+          </div>
+        </header>
+
+        <main id="view" class="view" tabindex="-1"></main>
+
+        <nav id="bottom-nav" class="bottom-nav" aria-label="تنقل سريع"></nav>
+      </div>
+
+      <div id="scrim" class="scrim" hidden></div>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
